@@ -6,7 +6,7 @@ import "../../utils/fix-map-icon";
 import "leaflet/dist/leaflet.css";
 import "./Map.css";
 import { SimpleAdEntity } from "types";
-import {SingleAd} from "./SingleAd";
+import { SingleAd } from "./SingleAd";
 
 export const Map = () => {
   const { search } = useContext(SearchContext);
@@ -32,7 +32,7 @@ export const Map = () => {
         {ads.map((ad) => (
           <Marker key={ad.id} position={[ad.lat, ad.lon]}>
             <Popup>
-              <SingleAd id={{ad.id}} />
+              <SingleAd id={ad.id} />
             </Popup>
           </Marker>
         ))}
